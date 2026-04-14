@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Jekyll: Serve Local Site",
+			"type": "shell",
+			"command": "/opt/homebrew/opt/ruby/bin/bundle",
+			"args": [
+				"exec",
+				"jekyll",
+				"serve",
+				"--livereload",
+				"--incremental",
+				"--port",
+				"4000"
+			],
+			"isBackground": true,
+			"group": "build"
+		}
+	]
+}

@@ -1,0 +1,219 @@
+cv:
+  name: Enhui Liu
+  label: Medical Student
+  email: leh0917@163.com
+  website: "https://github.com/enhui-liu"
+  image: ""
+  summary: High-performing medical student with strong responsibility, perseverance, and time management. Experienced in clinical and research settings, with strengths in leadership, innovation, teamwork, and data analysis with R.
+
+  social_networks:
+    - network: GitHub
+      username: enhui-liu
+
+  address:
+    city: Dongguan
+    region: Guangdong
+    postalCode: ""
+    countryCode: CN
+
+  sections:
+    Education:
+      - institution: Guangzhou Medical University
+        logo: /assets/img/cv/gmu.jpeg
+        location: Guangzhou, China
+        area: Paediatrics
+        studyType: Bachelor of Medicine
+        start_date: 2022
+        end_date: 2027
+
+
+      - institution: Guangzhou Medical University
+        logo: /assets/img/cv/gmu.jpeg
+        location: Guangzhou, China
+        area: Medical Technology (Rehabilitation Therapy)
+        studyType: Year 1
+        start_date: 2021
+        end_date: 2022
+
+    International Training Experience:
+      - institution: "**Harvard University**"
+        logo: /assets/img/cv/harvard-logo.png
+        location: Cambridge, MA, USA
+        area: Human Endocrine Physiology
+        date: 2025
+
+      - institution: "**Cambridge University Hospitals**"
+        logo: /assets/img/cv/cambridge-university-hospitals-logo.png
+        location: Online
+        area: Introduction to Clinical Medicine
+        date: 2024
+
+      - institution: "**University of North Carolina**"
+        logo: /assets/img/cv/university-of-north-carolina-logo.png
+        location: Online
+        area: Global Health Course
+        date: 2022
+
+    Experience:
+      - company: PKU-EMBL Lab
+        position: Visiting Student, BASALT Maintainer and Web Developer
+        location: China
+        start_date: 2025
+        end_date: Present
+        summary: Maintains the BASALT pipeline and supports reproducible environmental microbiology workflows.
+        highlights:
+          - Ensured pipeline stability, version control, and continuous integration.
+          - Designed and deployed a dynamic web front-end for BASALT.
+
+      - company: Guangzhou Women and Children's Medical Center, Guangzhou Medical University
+        position: Intern, Obstetrics and Gynaecology Department
+        location: Guangzhou, China
+        start_date: 2024
+        end_date: 2025
+        summary: Full-time clinical internship completed in 01/2024 and 07/2025.
+        highlights:
+          - Participated in more than 80 outpatient consultations and studied physical and B-ultrasound examinations of pregnant women.
+          - Followed ward nursing processes and patient management norms, including dressing changes and fetal heart monitoring.
+          - Observed cesarean sections and laser treatment for twin transfusion syndrome to strengthen perioperative knowledge.
+
+      - company: International Medical Journals
+        position: Peer Reviewer
+        location: Remote
+        start_date: 2025
+        end_date: Present
+        highlights:
+          - Reviewer for BMC Oral Health, Scientific Reports, European Journal of Medical Research, and Diabetology & Metabolic Syndrome.
+          - Recognized as a Springer Nature Trusted Reviewer.
+
+    Awards(selected):
+      - title: Excellent Student Leader in Student Union
+        date: 2024
+        awarder: Guangzhou Medical University
+
+      - title: First-Class Scholarship
+        date: 2023
+        awarder: Guangzhou Medical University
+
+      - title: Advanced Individual, Arts Festival
+        date: 2023
+        awarder: Guangzhou Medical University
+
+      - title: Outstanding Merit Student
+        date: 2023
+        awarder: Guangzhou Medical University
+
+      - title: Merit Student
+        date: 2022
+        awarder: Guangzhou Medical University
+
+      - title: Excellent Prize, First 3D Printing Competition
+        date: 2022
+        awarder: Guangzhou Medical University
+
+      - title: Special Grant
+        date: 2022
+        awarder: Guangzhou Medical University
+        summary: Only one recipient in the college.
+
+      - title: Merit Student
+        date: 2021
+        awarder: Guangzhou Medical University
+
+      - title: Third-Class Scholarship
+        date: 2021
+        awarder: Guangzhou Medical University
+
+    Publications:
+      - title: Associations of weight-adjusted waist index with cardiovascular chest pain risk in U.S. adults
+        publisher: Journal of Health, Population and Nutrition
+        releaseDate: 2025-12
+        url: "https://doi.org/10.1186/s41043-025-01175-9"
+        selected: true
+        summary: 'Chen Z., Hu Y., **Liu E.** (co-first author), et al. (2025).'
+
+      - title: "Association between dietary inflammation index and herpes simplex virus I and II: A cross-sectional study"
+        publisher: PLOS One
+        releaseDate: 2025-02
+        url: "https://doi.org/10.1371/journal.pone.0316901"
+        selected: true
+        summary: 'Luo J., **Liu E.** (co-first author), Chen H., et al. (2025).'
+
+      - title: "Association between serum vitamin E and bacterial vaginitis in women: a cross-sectional study"
+        publisher: BMC Women's Health
+        releaseDate: 2024-06
+        url: "https://doi.org/10.1186/s12905-024-03065-4"
+        selected: true
+        summary: '**Liu E.**, Liao W., Chen H., et al. (2024).'
+
+      - title: "Association between single-point insulin sensitivity estimator and heart failure in older adults: A cross-sectional study"
+        publisher: Experimental Gerontology
+        releaseDate: 2024-10
+        url: "https://doi.org/10.1016/j.exger.2024.112578"
+        summary: 'Zhu X., Mo Y., Hu Y., Feng Y., **Liu E.** (2024).'
+
+    Conference Presentations:
+      - bullet: '**Oral presentation** at the 4th International Webinar on Gynaecology and Obstetrics, with Outstanding Oral Presentation Certificate.'
+        date: 11/2024
+      - bullet: '**Poster presentations** at the 10th and 11th Academic Conference of the Infectious Diseases Professional Committee, Chinese Medical Education Association.'
+
+    Skills:
+      - name: Research and Data Analysis
+        icon: fa-solid fa-chart-line
+        keywords:
+          - R
+          - Python
+          - SPSS
+          - Statistical Computing
+          - Data Analysis
+
+      - name: Technical Skills
+        icon: fa-solid fa-code
+        keywords:
+          - Web Front-End Development
+          - Adobe Illustrator
+
+      - name: Clinical and Leadership
+        icon: fa-solid fa-user-doctor
+        keywords:
+          - Clinical Observation
+          - Patient Management
+          - Team Coordination
+          - Event Organization
+
+
+    Languages:
+      - name: Chinese
+        summary: Native speaker
+
+      - name: English
+        summary: Fluent
+
+    Interests:
+      - name: Research Interests
+        icon: fa-solid fa-microscope
+        keywords:
+          - AI for Healthcare
+          - Multimodal AI
+
+      - name: Personal Interests
+        icon: fa-solid fa-heart
+        keywords:
+          - Guzheng (Grade 5)
+          - Volleyball (university team, second prize)
+          - Debating (runner-up, university competition)
+          - Hosting and event organization
+          - Volunteering (206 hours)
+
+    Certificates:
+      - name: CPR and AED Certification
+        issuer: Guangzhou Red Cross Society
+        icon: fa-solid fa-certificate
+
+      - name: Computer Proficiency Rank Examination (Provincial Level 2)
+        issuer: Provincial Certification
+        icon: fa-solid fa-certificate
+
+    Leadership and Profiles:
+      - bullet: '**Student Union President**, Paediatrics Department; organized and led school and faculty events.'
+      - bullet: Core member in Internet+, Challenge Cup, and Guangdong Provincial Zhongchuang Cup competitions.
+

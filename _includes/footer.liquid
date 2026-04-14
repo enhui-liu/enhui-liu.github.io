@@ -1,0 +1,36 @@
+{% capture footer_contents %}
+  {% if site.impressum_path %}
+    <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
+  {% endif %}
+  {% if site.last_updated %}
+    Last updated: {{ 'now' | date: '%B %d, %Y' }}.
+  {% endif %}
+{% endcapture %}
+
+{% assign has_footer_content = footer_contents | strip %}
+
+{% if site.newsletter.enabled %}
+  <footer class="sticky-bottom mt-5" role="contentinfo">
+    {% include newsletter.liquid %}
+
+    {% if has_footer_content != '' %}
+      <div class="container">
+        {{ footer_contents }}
+      </div>
+    {% endif %}
+  </footer>
+{% elsif has_footer_content != '' %}
+  {% if site.footer_fixed %}
+    <footer class="fixed-bottom" role="contentinfo">
+      <div class="container mt-0">
+        {{ footer_contents }}
+      </div>
+    </footer>
+  {% else %}
+    <footer class="sticky-bottom mt-5" role="contentinfo">
+      <div class="container">
+        {{ footer_contents }}
+      </div>
+    </footer>
+  {% endif %}
+{% endif %}

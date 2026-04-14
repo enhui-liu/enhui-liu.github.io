@@ -1,0 +1,12 @@
+{% assign empty_array = '' | split: ',' %}
+{% assign publications = site.data.cv.cv.sections.Publications | default: site.data.resume.publications | default: empty_array %}
+{% assign selected_publications = publications | where: 'selected', true %}
+
+<div class="publications publications-cv">
+  {% if selected_publications.size > 0 %}
+    {% assign entries = selected_publications %}
+    {% include cv/publications.liquid %}
+  {% else %}
+    {% bibliography --group_by none --query @*[selected=true]* %}
+  {% endif %}
+</div>

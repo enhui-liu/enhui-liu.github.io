@@ -1,0 +1,103 @@
+{% comment %}
+  Unified education entry renderer for both RenderCV and JSONResume formats
+  Handles both:
+  - RenderCV: institution, area, studyType (or degree), start_date, end_date, location, courses, highlights
+  - JSONResume: institution, area, studyType, startDate, endDate, location, courses, highlights
+{% endcomment %}
+
+<ul class="card-text font-weight-light list-group list-group-flush{% if include.center_dates %} centered-date-badges{% endif %}">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-12 col-sm-2 col-md-2 text-center cv-date-cell">
+          {% assign single_date = entry.date | default: '' | strip %}
+          {% assign start_date = entry.start_date | default: entry.startDate | default: '' | strip %}
+          {% assign end_date = entry.end_date | default: entry.endDate | default: '' | strip %}
+          {% assign location = entry.location | default: '' | strip %}
+
+          {% if single_date != '' %}
+            {% assign date = single_date %}
+          {% elsif start_date != '' %}
+            {% comment %} Extract year only from dates like "1933-01-01" or just use "1933" as is {% endcomment %}
+            {% assign startDate = start_date | split: '-' | first %}
+            {% assign endDate = end_date | split: '-' | first | default: 'Present' %}
+            {% assign date = startDate | append: ' - ' | append: endDate %}
+          {% else %}
+            {% assign date = null %}
+          {% endif %}
+
+          <table class="table-cv">
+            <tbody>
+              {% if date %}
+                <tr>
+                  <td>
+                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">{{ date }}</span>
+                  </td>
+                </tr>
+              {% endif %}
+            </tbody>
+          </table>
+          {% if location != '' %}
+            <p class="location mt-1 mb-0 text-center">
+              <i class="fa-solid fa-location-dot iconlocation"></i>
+              {{ location }}
+            </p>
+          {% endif %}
+        </div>
+        <div class="col-12 col-sm-10 col-md-10 mt-2 mt-md-0">
+          {% assign study_type = entry.studyType | default: entry.degree | default: '' | strip %}
+          {% capture logo_exists %}{% file_exists {{ entry.logo }} %}{% endcapture %}
+
+          <div class="d-flex align-items-start justify-content-between ml-1 ml-md-4" style="gap: 1rem">
+            <div style="flex: 1 1 auto; min-width: 0">
+              {% if entry.url %}
+                <h6 class="title font-weight-bold">
+                  <a href="{{ entry.url }}">{{ study_type }}</a>
+                </h6>
+              {% elsif study_type != '' %}
+                <h6 class="title font-weight-bold">{{ study_type }}</h6>
+              {% endif %}
+
+              {% if entry.institution %}
+                {% if study_type == '' %}
+                  <h6 class="title font-weight-bold">{{ entry.institution | markdownify | remove: '<p>' | remove: '</p>' }}</h6>
+                {% else %}
+                  <h6 style="font-size: 0.95rem">{{ entry.institution | markdownify | remove: '<p>' | remove: '</p>' }}</h6>
+                {% endif %}
+              {% endif %}
+
+              {% if entry.area %}
+                <h6 style="font-size: 0.95rem; font-style: italic">{{ entry.area }}</h6>
+              {% endif %}
+            </div>
+
+            {% if entry.logo and logo_exists == 'true' %}
+              <div class="text-right" style="flex: 0 0 132px">
+                <img
+                  src="{{ entry.logo | relative_url }}"
+                  alt="{{ entry.institution | markdownify | strip_html | strip | default: 'Institution' }} logo"
+                  style="max-height: 60px; max-width: 132px; object-fit: contain"
+                >
+              </div>
+            {% endif %}
+          </div>
+
+          {% if entry.courses or entry.highlights %}
+            <ul class="items">
+              {% for item in entry.courses %}
+                <li>
+                  <span class="item">{{ item }}</span>
+                </li>
+              {% endfor %}
+              {% for item in entry.highlights %}
+                <li>
+                  <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
