@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Visiting student at PKU-EMBL Lab.
+Visiting student at [PKU-EMBL Lab](https://embl-pku.github.io/team/).
